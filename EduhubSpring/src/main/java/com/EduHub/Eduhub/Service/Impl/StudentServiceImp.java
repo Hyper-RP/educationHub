@@ -36,6 +36,7 @@ public class StudentServiceImp implements StudentService {
         if (request.getPassword() == null) {
             throw new IllegalArgumentException("Password cannot be null");
         }
+
         String hashedPassword = encoder.encode(request.getPassword());
 
         StudentEntity student = new StudentEntity();
