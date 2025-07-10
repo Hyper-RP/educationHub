@@ -1,0 +1,23 @@
+
+import React from 'react';
+import { Box, Typography, Container } from '@mui/material';
+import { motion } from 'framer-motion';
+
+const UserDashboard = () => (
+  <Container sx={{ py: 8 }} maxWidth="md">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <Typography variant="h4" align="center" gutterBottom>
+        Welcome to your User Dashboard!
+      </Typography>
+      <Typography variant="body1" align="center">
+        Here you can view your enrolled courses, progress, and profile.
+      </Typography>
+    </motion.div>
+  </Container>
+);
+
+export default UserDashboard;

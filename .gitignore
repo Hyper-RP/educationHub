@@ -1,0 +1,7 @@
+
+# Dependencies
+/EduHubFrontend/node_modules
+/EduhubSpring/target
+
+# Temporary files
+commit_message.txt
