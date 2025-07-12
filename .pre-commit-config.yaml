@@ -1,0 +1,5 @@
+repos:
+  - repo: https://github.com/GitGuardian/ggshield
+    rev: v1.18.0  # check for latest version
+    hooks:
+      - id: ggshield

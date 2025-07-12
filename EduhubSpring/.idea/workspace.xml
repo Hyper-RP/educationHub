@@ -6,10 +6,33 @@
   <component name="ChangeListManager">
     <list default="true" id="1801c414-5c98-4bad-a8f4-f87251b01e5c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/EduHub/Eduhub/Controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/EduHub/Eduhub/Controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/EduHub/Eduhub/Service/Impl/StudentServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/EduHub/Eduhub/Service/Impl/StudentServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/EduHub/Eduhub/Service/Impl/otpService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/EduHub/Eduhub/Service/Impl/otpService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/EduHub/Eduhub/Service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/EduHub/Eduhub/Service/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eduhub/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eduhub/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eduhub/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eduhub/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eduhub/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eduhub/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eduhub/src/main/java/com/EduHub/Eduhub/Controller/AdminController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eduhub/src/main/java/com/EduHub/Eduhub/Controller/StudentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eduhub/src/main/java/com/EduHub/Eduhub/Dto/ForgotPassWordRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eduhub/src/main/java/com/EduHub/Eduhub/Dto/LoginAdminRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eduhub/src/main/java/com/EduHub/Eduhub/Dto/LoginRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eduhub/src/main/java/com/EduHub/Eduhub/Dto/OtpResetRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eduhub/src/main/java/com/EduHub/Eduhub/Dto/RegisterStudentRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eduhub/src/main/java/com/EduHub/Eduhub/EduhubApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eduhub/src/main/java/com/EduHub/Eduhub/Entity/AdminEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eduhub/src/main/java/com/EduHub/Eduhub/Entity/StudentEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eduhub/src/main/java/com/EduHub/Eduhub/Repository/AdminRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eduhub/src/main/java/com/EduHub/Eduhub/Repository/StudentRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eduhub/src/main/java/com/EduHub/Eduhub/Service/AdminService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eduhub/src/main/java/com/EduHub/Eduhub/Service/Impl/AdminServiceImp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eduhub/src/main/java/com/EduHub/Eduhub/Service/Impl/OtpServiceImp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eduhub/src/main/java/com/EduHub/Eduhub/Service/Impl/StudentServiceImp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eduhub/src/main/java/com/EduHub/Eduhub/Service/OtpService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eduhub/src/main/java/com/EduHub/Eduhub/Service/StudentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eduhub/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eduhub/src/test/java/com/EduHub/Eduhub/Config/UserConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eduhub/src/test/java/com/EduHub/Eduhub/EduhubApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

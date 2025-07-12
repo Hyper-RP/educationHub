@@ -8,9 +8,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Eduhub (1)" />
-        <module name="Eduhub" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Eduhub" target="21" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
