@@ -43,17 +43,17 @@ public class StudentController {
         return "Student Login Successfully";
     }
 
-    @PostMapping("/student/send-otp")
-    public ResponseEntity<String> sendOtp(@RequestBody Map<String, String> request) {
-        String email = request.get("email");
-        return studentService.sendOtpToEmail(email);
-    }
+//    @PostMapping("/student/send-otp")
+//    public ResponseEntity<String> sendOtp(@RequestBody Map<String, String> request) {
+//        String email = request.get("email");
+//        return studentService.sendOtpToEmail(email);
+//    }
 
 
-    @PostMapping("/student/verify-otp")
-    public ResponseEntity<String> verifyOtp(@RequestParam String email, @RequestParam String otp) {
-        return studentService.verifyOtp(email, otp);
-    }
+//    @PostMapping("/student/verify-otp")
+//    public ResponseEntity<String> verifyOtp(@RequestParam String email, @RequestParam String otp) {
+//        return studentService.verifyOtp(email, otp);
+//    }
 
     @PostMapping("/student/reset-password")
     public ResponseEntity<String> resetPassword(@RequestParam String email, @RequestParam String newPassword) {

@@ -4,7 +4,6 @@ import com.EduHub.Eduhub.Dto.LoginRequest;
 import com.EduHub.Eduhub.Dto.RegisterStudentRequest;
 import com.EduHub.Eduhub.Entity.StudentEntity;
 import com.EduHub.Eduhub.Repository.StudentRepo;
-import com.EduHub.Eduhub.Service.OtpService;
 import com.EduHub.Eduhub.Service.StudentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +22,7 @@ public class StudentServiceImp implements StudentService {
     public final StudentRepo studentRepo;
 
     @Autowired
-    private OtpService otpService;
+    private otpService otpService;
 
     @Override
     public StudentEntity createStudent(RegisterStudentRequest request) {
@@ -75,24 +74,30 @@ public class StudentServiceImp implements StudentService {
         return "User Login Successfully" + student.getName();
     }
 
-    @Override
+//    @Override
     public ResponseEntity<String> sendOtpToEmail(String email) {
         if (!studentRepo.existsByEmail(email)) {
             return ResponseEntity.badRequest().body("Email not found");
         }
 
-        String otp = otpService.generateOtp(email);
+//        String otp = otpService.generateAndSendOtp(email);
 
         // Simulate sending email (or later integrate email service)
-        System.out.println("OTP for " + email + " is: " + otp);
+//        System.out.println("OTP for " + email + " is: " + otp);
 
         return ResponseEntity.ok("OTP sent to your email");
     }
 
-    @Override
+//    @Override
     public ResponseEntity<String> verifyOtp(String email, String otp) {
-        return otpService.verifyOtp(email, otp);
+        return null;
     }
+
+//    @Override
+//    public ResponseEntity<String> verifyOtp(String email, String otp) {
+//
+//        return otpService.verifyOtp(email, otp);
+//    }
 
     @Override
     public ResponseEntity<String> resetPassword(String email, String newPassword) {
