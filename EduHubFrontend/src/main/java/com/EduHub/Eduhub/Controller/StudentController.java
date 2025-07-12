@@ -38,9 +38,18 @@ public class StudentController {
     }
 
     @PostMapping("/Login")
-    public String LoginStudent(@RequestBody LoginRequest request){
-        studentService.loginStudent(request);
-        return "Student Login Successfully";
+    public ResponseEntity<String> login(@RequestBody LoginRequest request) {
+        return ResponseEntity.ok(studentService.loginStudent(request));
+    }
+
+    @PostMapping("/forgot-password")
+    public ResponseEntity<String> forgotPassword(@RequestParam String email) {
+        return studentService.sendOtpToEmail(email);
+    }
+
+    @PostMapping("/reset-password")
+    public ResponseEntity<String> resetPassword(@RequestBody OtpResetRequest request) {
+        return studentService.resetPassword(request.getEmail(), request.getNewPassword());
     }
 
     @PostMapping("/student/send-otp")

@@ -27,6 +27,9 @@ const SignInForm = ({ userType }) => {
               className="w-full p-2 mt-1 border border-gray-300 rounded-md"
             />
           </div>
+            <div className="text-sm">
+              <a href="/forgot-password" className="font-medium text-indigo-600 hover:text-indigo-500">Forgot your password?</a>
+            </div>
           <button className="w-full py-2 text-white bg-indigo-600 rounded-md hover:bg-indigo-700">
             Sign In
           </button>

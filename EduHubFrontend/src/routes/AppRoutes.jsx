@@ -11,6 +11,8 @@ import CourseDetails from '../pages/CourseDetails';
 import UserProfile from '../pages/user/UserProfile';
 import ManageCourses from '../pages/admin/ManageCourses';
 import ManageUsers from '../pages/admin/ManageUsers';
+import ForgotPassword from '../pages/ForgotPassword';
+import ResetPassword from '../pages/ResetPassword';
 
 const AppRoutes = () => (
   <Routes>
@@ -24,6 +26,8 @@ const AppRoutes = () => (
     <Route path="/profile" element={<UserProfile />} />
     <Route path="/admin/courses" element={<ManageCourses />} />
     <Route path="/admin/users" element={<ManageUsers />} />
+    <Route path="/forgot-password" element={<ForgotPassword />} />
+    <Route path="/reset-password" element={<ResetPassword />} />
   </Routes>
 );
 

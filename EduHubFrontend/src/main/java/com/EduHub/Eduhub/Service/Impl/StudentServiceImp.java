@@ -71,7 +71,37 @@ public class StudentServiceImp implements StudentService {
             return "Invalid Password";
         }
 
-        return "User Login Successfully" + student.getName();
+        return "Login successful";
+    }
+
+    @Override
+    public ResponseEntity<String> sendOtpToEmail(String email) {
+        StudentEntity student = studentRepo.findByEmail(email);
+        if (student == null) {
+            return ResponseEntity.badRequest().body("Student not found");
+        }
+        String otp = otpService.generateOtp(email);
+        // Implement email sending logic here
+        return ResponseEntity.ok("OTP sent to email");
+    }
+
+    @Override
+    public ResponseEntity<String> verifyOtp(String email, String otp) {
+        if (otpService.validateOtp(email, otp)) {
+            return ResponseEntity.ok("OTP verified");
+        }
+        return ResponseEntity.badRequest().body("Invalid OTP");
+    }
+
+    @Override
+    public ResponseEntity<String> resetPassword(String email, String newPassword) {
+        StudentEntity student = studentRepo.findByEmail(email);
+        if (student == null) {
+            return ResponseEntity.badRequest().body("Student not found");
+        }
+        student.setPassword(newPassword);
+        studentRepo.save(student);
+        return ResponseEntity.ok("Password reset successful");
     }
 
     @Override

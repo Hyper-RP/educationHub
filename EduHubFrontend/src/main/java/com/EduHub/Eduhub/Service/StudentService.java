@@ -18,9 +18,7 @@ public interface StudentService {
 
     ResponseEntity<String> sendOtpToEmail(String email);
 
-//    ResponseEntity<String> sendOtpToEmail(String email);
-//
     ResponseEntity<String> verifyOtp(String email, String otp);
-//
+
     ResponseEntity<String> resetPassword(String email, String newPassword);
 }
