@@ -16,7 +16,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class StudentServiceImp implements StudentService {
+public abstract class StudentServiceImp implements StudentService {
 
     @Autowired
     public final StudentRepo studentRepo;
@@ -42,10 +42,7 @@ public class StudentServiceImp implements StudentService {
         student.setName(request.getName());
         student.setEmail(request.getEmail());
         student.setPassword(hashedPassword);
-
-
         return studentRepo.save(student);
-
     }
 
     @Override
@@ -70,32 +67,23 @@ public class StudentServiceImp implements StudentService {
         if( !encoder.matches(request.getPassword(), student.getPassword())){
             return "Invalid Password";
         }
-
         return "User Login Successfully" + student.getName();
     }
 
 //    @Override
-    public ResponseEntity<String> sendOtpToEmail(String email) {
-        if (!studentRepo.existsByEmail(email)) {
-            return ResponseEntity.badRequest().body("Email not found");
-        }
-
-//        String otp = otpService.generateAndSendOtp(email);
-
-        // Simulate sending email (or later integrate email service)
-//        System.out.println("OTP for " + email + " is: " + otp);
-
-        return ResponseEntity.ok("OTP sent to your email");
-    }
-
-//    @Override
-    public ResponseEntity<String> verifyOtp(String email, String otp) {
-        return null;
-    }
+//    public ResponseEntity<String> sendOtpToEmail(String email) {
+//        if (!studentRepo.existsByEmail(email)) {
+//            return ResponseEntity.badRequest().body("Email not found");
+//        }
+//        return ResponseEntity.ok("OTP sent to your email");
+//    }
 
 //    @Override
 //    public ResponseEntity<String> verifyOtp(String email, String otp) {
-//
+//        return null;
+//    }
+
+//    public boolean verifyOtp(String email, String otp) {
 //        return otpService.verifyOtp(email, otp);
 //    }
 
@@ -111,7 +99,6 @@ public class StudentServiceImp implements StudentService {
         String encodedPassword = new org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder().encode(newPassword);
         student.setPassword(encodedPassword);
         studentRepo.save(student);
-
         return ResponseEntity.ok("Password updated successfully");
     }
 
